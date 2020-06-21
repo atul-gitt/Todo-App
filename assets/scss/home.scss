@@ -1,0 +1,170 @@
+body {
+	background-color: grey;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	#todo-container {
+		width: 500px;
+		background-color: white;
+		#get-task {
+			width: 500px;
+			color: #666666;
+
+			.background{
+				background-color: #EAEDF0;
+			}
+			h1 {
+				font-family: serif;
+				font-weight: 100;
+				text-align:center;
+			}
+
+			label {
+				font-size: 15px;
+				font-family: sans-serif;
+				font-weight: bold;
+				margin-left: 5px;
+			}
+
+			#desc {
+				height: 50px;
+				width: 100%;
+				border-top: 1px solid grey;
+				border-bottom: 1px solid grey;
+			}
+
+			#description {
+				margin-left: 5px;
+				width: 95%;
+				border: none;
+				outline: none;
+			}
+
+			#flex-container{
+				display: flex;
+				justify-content: flex-start;
+				#cat {
+					height: 50px;
+					width: 50%;
+					display: inline-block;
+					border-right: 1px solid grey;
+					border-bottom: 1px solid grey;
+					/*background-color: lightgreen;*/
+
+					#category {
+						margin-left: 2px;
+						border: none;
+						width: 95%;
+						outline: none;
+					}
+				}
+
+				#dd {
+					height: 50px;
+					width: 50%;
+					border-bottom: 1px solid grey;
+					display: inline-block;
+					/*background-color: lightblue;*/
+				}
+
+				#due-date {
+					margin-left: 5px;
+					border: none;
+					width: 95%;
+					outline: none;
+				}
+
+			}
+
+		}	
+		#btn-container {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 38px;
+			button {
+				border: none;
+				color: white;
+				padding: 16px 32px;
+				text-decoration: none;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 5px;
+				font-size: 15px;
+			}
+			#create-btn {
+				background-color: #444444;
+			}
+			#delete-btn {
+				background-color: #EE351E;
+			}
+			i {
+				margin-right: 10px;
+			}
+		}
+		#tasks {
+			input[type=checkbox]{
+				&:checked {
+					+ {
+						label {
+							p{
+								text-decoration: line-through;
+							}
+							
+						}
+					}
+				}
+			}
+
+			.white {
+				background-color: white;
+			}
+			.blue {
+				background-color: #3C6BBC;
+			}
+			.purple {
+				background-color: #9C00AF;
+			}
+			.yellow {
+				background-color: #F2A700;
+			}
+			.pink {
+				background-color: pink;
+			}
+			.green {
+				background-color: green;
+			}
+			padding-top: 10px;
+			border-top: 1px solid grey;
+		
+			#task-des-dd {
+				width: 60%;
+				display: inline-block;
+				margin-left: 10px;
+				color: grey;
+				font-weight: bolder;
+				p{
+					margin : 0;
+				}
+				#disp-date {
+					margin-top: 5px;
+					font-size: 15px;
+				}
+			}
+			#category-box{
+				display: inline-block;
+				width: 70px;
+				color: white;
+				padding: 16px 32px;
+				text-decoration: none;
+				margin-bottom: 17px;
+				border-radius: 5px;
+				font-size: 15px;
+				font-family: sans-serif;
+			}
+			
+		}
+	}
+}
+

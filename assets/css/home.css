@@ -1,0 +1,116 @@
+body {
+  background-color: grey; }
+
+#container {
+  display: flex;
+  justify-content: center; }
+  #container #todo-container {
+    width: 500px;
+    background-color: white; }
+    #container #todo-container #get-task {
+      width: 500px;
+      color: #666666; }
+      #container #todo-container #get-task .background {
+        background-color: #EAEDF0; }
+      #container #todo-container #get-task h1 {
+        font-family: serif;
+        font-weight: 100;
+        text-align: center; }
+      #container #todo-container #get-task label {
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-left: 5px; }
+      #container #todo-container #get-task #desc {
+        height: 50px;
+        width: 100%;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey; }
+      #container #todo-container #get-task #description {
+        margin-left: 5px;
+        width: 95%;
+        border: none;
+        outline: none; }
+      #container #todo-container #get-task #flex-container {
+        display: flex;
+        justify-content: flex-start; }
+        #container #todo-container #get-task #flex-container #cat {
+          height: 50px;
+          width: 50%;
+          display: inline-block;
+          border-right: 1px solid grey;
+          border-bottom: 1px solid grey;
+          /*background-color: lightgreen;*/ }
+          #container #todo-container #get-task #flex-container #cat #category {
+            margin-left: 2px;
+            border: none;
+            width: 95%;
+            outline: none; }
+        #container #todo-container #get-task #flex-container #dd {
+          height: 50px;
+          width: 50%;
+          border-bottom: 1px solid grey;
+          display: inline-block;
+          /*background-color: lightblue;*/ }
+        #container #todo-container #get-task #flex-container #due-date {
+          margin-left: 5px;
+          border: none;
+          width: 95%;
+          outline: none; }
+    #container #todo-container #btn-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 38px; }
+      #container #todo-container #btn-container button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 15px; }
+      #container #todo-container #btn-container #create-btn {
+        background-color: #444444; }
+      #container #todo-container #btn-container #delete-btn {
+        background-color: #EE351E; }
+      #container #todo-container #btn-container i {
+        margin-right: 10px; }
+    #container #todo-container #tasks {
+      padding-top: 10px;
+      border-top: 1px solid grey; }
+      #container #todo-container #tasks input[type=checkbox]:checked + label p {
+        text-decoration: line-through; }
+      #container #todo-container #tasks .white {
+        background-color: white; }
+      #container #todo-container #tasks .blue {
+        background-color: #3C6BBC; }
+      #container #todo-container #tasks .purple {
+        background-color: #9C00AF; }
+      #container #todo-container #tasks .yellow {
+        background-color: #F2A700; }
+      #container #todo-container #tasks .pink {
+        background-color: pink; }
+      #container #todo-container #tasks .green {
+        background-color: green; }
+      #container #todo-container #tasks #task-des-dd {
+        width: 60%;
+        display: inline-block;
+        margin-left: 10px;
+        color: grey;
+        font-weight: bolder; }
+        #container #todo-container #tasks #task-des-dd p {
+          margin: 0; }
+        #container #todo-container #tasks #task-des-dd #disp-date {
+          margin-top: 5px;
+          font-size: 15px; }
+      #container #todo-container #tasks #category-box {
+        display: inline-block;
+        width: 70px;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin-bottom: 17px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-family: sans-serif; }

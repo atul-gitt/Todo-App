@@ -1,0 +1,24 @@
+document.getElementById('description').addEventListener("mouseover",function(){
+	this.classList.toggle("background");
+	document.getElementById('desc').classList.toggle("background");
+});
+document.getElementById('category').addEventListener("mouseover",function(){
+	this.classList.toggle("background");
+	document.getElementById('cat').classList.toggle("background");
+});
+document.getElementById('due-date').addEventListener("mouseover",function(){
+	this.classList.toggle("background");
+	document.getElementById('dd').classList.toggle("background");
+});
+document.getElementById('description').addEventListener("mouseout",function(){
+	this.classList.toggle("background");
+	document.getElementById('desc').classList.toggle("background");
+});
+document.getElementById('category').addEventListener("mouseout",function(){
+	this.classList.toggle("background");
+	document.getElementById('cat').classList.toggle("background");
+});
+document.getElementById('due-date').addEventListener("mouseout",function(){
+	this.classList.toggle("background");
+	document.getElementById('dd').classList.toggle("background");
+});

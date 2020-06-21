@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+		<script src="https://kit.fontawesome.com/14e3f896a7.js" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="/css/home.css">
+	</head>
+	<body>
+		<div id="container">
+		<div id="todo-container">
+			<div id="get-task">
+				<h1>TODO App</h1>
+				<form action='/create' method="POST" id="form1">
+					<div id="desc">
+						<label for="description">DESCRIPTION</label> <br>
+						<input type="text" id="description" name="description" placeholder="What do you need to do?" required>
+						<br>
+					</div>
+					<div id="flex-container">
+						<div id="cat">
+							<label for="category">CATEGORY</label> <br>
+							<select name="category" id="category">
+								<option value="ignore">Choose a category</option>
+				  				<option value="PERSONAL">Personal</option>
+				 				<option value="WORK">Work</option>
+								<option value="SCHOOL">School</option>
+								<option value="CLEANING">Cleaning</option>
+								<option value="OTHER">Other</option>
+							</select>
+						</div>
+						<div id="dd">
+							<label for="due_date">DUE DATE</label> <br>
+							<input type="date" id="due-date" name="due_date" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<br>
+					<!-- <input id="create-btn" type="submit" value="ADD TASK"> -->
+					
+				</form>
+			</div>
+
+			<div id="btn-container">
+				<div>
+					<button type="submit" form="form1" value="Submit" id="create-btn"><i class="fas fa-plus"></i>ADD TASK</button>
+				</div>
+				<div>
+					<button type="submit" form="form2" value="Submit" id="delete-btn"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+				</div>
+			</div>
+
+			<div>
+	            <form action='/delete' method="POST" id="form2">
+	            	<!-- <input type="submit" value="DELETE TASKS"> -->
+	            	<% for(let i=0; i < task_list.length;i++) { %>
+	                        <div id="tasks">
+	                            <input type="checkbox" class="task" id='<%= "task" + i %>' name="task" value='<%= task_list[i].description %>'>
+								<label for='<%= "task" + i %>'>
+											<div id="task-des-dd">
+												<p><%= task_list[i].description %></p>
+												<p id="disp-date"><i class="fas fa-calendar-alt"></i>
+													<% let date = ""; if(task_list[i].due_date){ %>
+												    <%  date = task_list[i].due_date.toString().substring(0,15) %>
+												    <% }else{ date = "NO DEADLINE"} %>
+												   <%= date; %>
+												</p>
+											</div>
+											<% var color = "white" %>
+											<% if(task_list[i].category == "PERSONAL"){ %> 
+											<%      color = "blue"; } %>
+											<% if(task_list[i].category == "WORK"){ %>
+											<%      color = "purple"; } %>
+											<% if(task_list[i].category == "SCHOOL"){ %>
+											<%      color = "yellow"; } %>
+											<% if(task_list[i].category == "CLEANING"){ %>
+											<%      color = "green"; } %>
+											<% if(task_list[i].category == "OTHER"){ %>
+											<%      color = "pink"; } %>
+
+											<div class='<%= color %>' id="category-box">
+												<%= task_list[i].category %> 
+											</div>
+								</label>
+	                        </div>
+	            	<%}%>
+	            </form>
+	        </div>
+    	</div>
+    </div>
+    	<script type="text/javascript" src="/js/home.js"></script>
+	</body>
+</html>
